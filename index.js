@@ -474,6 +474,7 @@ function Windows(instance, callback) {
         function(error) {
           if (error) return callback(error);
           function end(error, stdout, stderr) {
+            callback(undefined, stdout, stderr);
             Remove(instance.path,
               function(errorRemove) {
                 if (error) return callback(error);
